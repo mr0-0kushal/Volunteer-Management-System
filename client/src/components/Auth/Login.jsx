@@ -1,12 +1,24 @@
 import React from 'react'
+import { useState } from 'react'
 
-const Login = () => {
+const Login = ({onSub}) => {
+  const [username, setUsername] = useState('')
+
+  const submitHandler = (e)=>{
+    e.preventDefault()
+    console.log(username)
+    onSub()
+  }
+
   return (
-    <div className="min-h-screen bg-slate-300 flex items-center justify-center">
-    <div className="p-5 bg-gray-500 flex flex-col items-center justify-center gap-5 rounded border-2 border-gray-800 shadow-lg w-1/2">
-      <form className="flex flex-col items-start gap-5">
+    <div className="p-5 bg-gray-300 flex flex-col items-center justify-center gap-5 rounded border-2 border-gray-800 shadow-lg w-1/2">
+      <form className="flex flex-col items-start gap-5" method='POST'
+        onSubmit={(e)=>{
+          submitHandler(e)
+        }}
+      >
         <p className="font-bold text-gray-800 text-lg">
-          Welcome, <span className="font-mono text-gray-200 font-semibold text-base">Sign in to continue</span>
+          Welcome, <span className="font-mono text-gray-600 font-semibold text-base">Sign in to continue</span>
         </p>
         <button className= "oauthButton">
           <svg className="w-6 h-6" viewBox="0 0 24 24">
@@ -30,12 +42,18 @@ const Login = () => {
           <div className="w-24 h-1 bg-gray-600 rounded" />
         </div>
         <input
+          required
+          onChange={(e)=>{
+            setUsername(e.target.value)
+          }}
+          value={username}
           type="email"
           placeholder="Email"
           name="email"
           className="w-64 h-10 px-3 rounded border-2 border-gray-800 bg-white shadow-lg text-gray-800 font-semibold outline-none"
         />
-        <button className="flex items-center justify-center gap-2 w-64 h-10 border-2 border-gray-800 bg-white shadow-lg text-gray-800 font-semibold rounded overflow-hidden relative transition-all duration-250 hover:text-gray-300">
+        <button
+        className=" oauthButton flex items-center justify-center gap-2 w-64 h-10 border-2 border-gray-800 bg-white shadow-lg text-gray-800 font-semibold rounded overflow-hidden relative transition-all duration-250 hover:text-gray-300">
           Continue
           <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <path d="m6 17 5-5-5-5" />
@@ -43,7 +61,6 @@ const Login = () => {
           </svg>
         </button>
       </form>
-    </div>
     </div>
   )
 }

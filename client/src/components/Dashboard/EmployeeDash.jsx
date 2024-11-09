@@ -11,7 +11,7 @@ const EmployeeDash = () => {
         <p className="text-[1.25rem] font-semibold">Manpreet</p>
       </div>
       <div className="flex h-fit w-full items-center justify-center gap-[0.5em]">
-        <div className="group relative flex h-[10em] w-[10em] items-center justify-center rounded-[1.5em] bg-[#889de9] px-[0.5rem] pt-[1rem]">
+        <div className="group relative flex h-[10em] w-[50%] items-center justify-center rounded-[1.5em] bg-[#889de9] px-[0.5rem] pt-[1rem]">
           <svg className="absolute left-1/2 top-[calc(50%+8px)] h-[9rem] w-[9rem] -translate-x-1/2 -translate-y-1/2" viewBox="0 0 160 160" fill="none" height={160} width={160} xmlns="http://www.w3.org/2000/svg">
             <path d="M130.912 130.912a71.997 71.997 0 0 0-10.911-110.778A71.999 71.999 0 0 0 9.383 94.046a72.004 72.004 0 0 0 19.705 36.866" strokeWidth={16} strokeLinecap="round" stroke="#c2c5ff" />
             <path d="M146.65 52.764A72.004 72.004 0 0 0 69.647 8.748a71.998 71.998 0 0 0-40.559 122.164" className="duration-[1s] [stroke-dasharray:100] [stroke-dashoffset:-98] group-hover:[stroke-dashoffset:0]" pathLength={100} strokeWidth={16} strokeLinecap="round" stroke="#152250" />
