@@ -25,7 +25,7 @@ const Login = ({onSub}) => {
       const response = await axios.post('/api/auth/login', { email });
       console.log(response.data); // Log the response from the backend
       localStorage.setItem('email', email); // Store email in localStorage
-      navigate('/otp'); // Redirect to OTP page
+      navigate('#'); // Redirect to OTP page
     } catch (error) {
       console.error('Error during login:', error);
       setError('Something went wrong, please try again.');
@@ -36,7 +36,7 @@ const Login = ({onSub}) => {
       <div className="p-5 bg-[#c2c5ff] text-[#152250] flex flex-col items-center justify-center gap-5 rounded border-2 border-gray-800 shadow-lg w-[35%]">
         <form className="flex flex-col items-start gap-5" method='POST'
           onSubmit={(e) => {
-            submitHandler(e)
+            handleLogin(e)
           }}
         >
           <p className="font-bold text-lg">
