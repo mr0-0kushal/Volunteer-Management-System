@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import TaskList from './components/TaskList/TaskList';
 import Home from './pages/HomePage'
 import Login from './components/Auth/Login';
+import EmployeeDash from './components/Dashboard/EmployeeDash'
 
 
 const App = () => {
@@ -15,6 +16,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/task" element={<TaskList />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/empdash" element={<EmployeeDash/>}/>
       </Routes>
     </Router>
   );
