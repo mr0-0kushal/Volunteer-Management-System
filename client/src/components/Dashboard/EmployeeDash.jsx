@@ -82,7 +82,7 @@ const EmployeeDash = () => {
         <p className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-[1rem] font-bold duration-500 group-hover:-translate-y-[140%]">
           Today's Quote
         </p>
-        <p className="absolute left-1/2 top-1/2 h-fit w-full -translate-y-1/2 translate-x-1/2 px-[1rem] text-left text-[0.75rem] font-bold duration-500 group-hover:-translate-x-1/2 text-center">
+        <p className="absolute left-1/2 top-1/2 h-fit w-full -translate-y-1/2 translate-x-1/2 px-[1rem] text-[0.75rem] font-bold duration-500 group-hover:-translate-x-1/2 text-center">
           "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ips""
         </p>
       </div>
