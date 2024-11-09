@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> f21422ca5d297cbb71a2ba0f12e388f3bb2368b7
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
@@ -39,6 +43,35 @@ const Login = () => {
 
         <button className="oauthButton flex items-center justify-center gap-2 w-full h-12 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-600 transition-all">
           <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+<<<<<<< HEAD
+=======
+=======
+import React from 'react'
+import { useState } from 'react'
+
+const Login = ({onSub}) => {
+  const [username, setUsername] = useState('')
+
+  const submitHandler = (e)=>{
+    e.preventDefault()
+    console.log(username)
+    onSub()
+  }
+
+  return (
+    <div className="p-5 bg-[#c2c5ff] text-[#152250] flex flex-col items-center justify-center gap-5 rounded border-2 border-gray-800 shadow-lg w-[35%]">
+      <form className="flex flex-col items-start gap-5" method='POST'
+        onSubmit={(e)=>{
+          submitHandler(e)
+        }}
+      >
+        <p className="font-bold text-lg">
+          Welcome, <span className="font-mono text-gray-600 font-semibold text-base">Sign in to continue</span>
+        </p>
+        <button className= "oauthButton">
+          <svg className="w-6 h-6" viewBox="0 0 24 24">
+>>>>>>> a8782af350f5d5d991a7a425bc7d4dc5d1dd5993
+>>>>>>> f21422ca5d297cbb71a2ba0f12e388f3bb2368b7
             <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4" />
             <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853" />
             <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05" />
@@ -53,18 +86,38 @@ const Login = () => {
           </svg>
           Continue with Github
         </button>
+<<<<<<< HEAD
 
         <div className="flex items-center justify-center gap-2 w-full">
           <div className="w-24 h-1 bg-gray-600 rounded" />
-          <span className="text-gray-800 font-mono font-semibold">OR</span>
+=======
+<<<<<<< HEAD
+
+        <div className="flex items-center justify-center gap-2 w-full">
           <div className="w-24 h-1 bg-gray-600 rounded" />
+=======
+        <div className="flex items-center justify-center gap-1 w-full">
+          <div className="w-24 h-1 bg-[#152250] rounded" />
+>>>>>>> a8782af350f5d5d991a7a425bc7d4dc5d1dd5993
+>>>>>>> f21422ca5d297cbb71a2ba0f12e388f3bb2368b7
+          <span className="text-gray-800 font-mono font-semibold">OR</span>
+          <div className="w-24 h-1 bg-[#152250] rounded" />
         </div>
 
         <input
+          required
+          onChange={(e)=>{
+            setUsername(e.target.value)
+          }}
+          value={username}
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder="Email"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> f21422ca5d297cbb71a2ba0f12e388f3bb2368b7
           className="w-full h-12 px-4 rounded-lg border-2 border-gray-800 bg-white shadow-md text-gray-800 font-semibold outline-none"
         />
         {error && <p className="text-red-500 text-sm mt-2">{error}</p>}
@@ -74,6 +127,16 @@ const Login = () => {
           className="w-full h-12 flex items-center justify-center gap-2 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition-all"
           onClick={handleLogin}
         >
+<<<<<<< HEAD
+=======
+=======
+          name="email"
+          className="w-64 h-10 px-3 rounded border-2 border-[#152250] bg-white shadow-lg font-semibold outline-none"
+        />
+        <button
+        className=" oauthButton flex items-center justify-center gap-2 w-64 h-10 border-2 bg-white font-semibold">
+>>>>>>> a8782af350f5d5d991a7a425bc7d4dc5d1dd5993
+>>>>>>> f21422ca5d297cbb71a2ba0f12e388f3bb2368b7
           Continue
           <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <path d="m6 17 5-5-5-5" />
@@ -82,7 +145,17 @@ const Login = () => {
         </button>
       </div>
     </div>
+<<<<<<< HEAD
   );
 };
+=======
+<<<<<<< HEAD
+  );
+};
+=======
+  )
+}
+>>>>>>> a8782af350f5d5d991a7a425bc7d4dc5d1dd5993
+>>>>>>> f21422ca5d297cbb71a2ba0f12e388f3bb2368b7
 
 export default Login;

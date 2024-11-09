@@ -13,7 +13,7 @@
     width: 250px;
     height: 40px;
     border-radius: 5px;
-    border: 2px solid black;
+    border: 2px solid #152250;
     background-color: white;
     font-size: 16px;
     font-weight: 600;
@@ -31,15 +31,10 @@
     left: 0;
     height: 100%;
     width: 0;
-    background-color: #212121;
+    background-color: #889de9;
     z-index: -1;
     transition: all 250ms;
   }
-  
-  .oauthButton:hover {
-    color: #e8e8e8;
-  }
-  
   .oauthButton:hover::before {
     width: 100%;
   }
@@ -48,3 +43,38 @@
     visibility: none;
     display: none;
   }
+
+  /* From Uiverse.io by akshat-patel28 */ 
+.button-container {
+  display: flex;
+  width: full;
+  height: 40px;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.button {
+  outline: 0 !important;
+  border: 0 !important;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  transition: all ease-in-out 0.3s;
+  cursor: pointer;
+}
+
+.button:hover {
+  transform: translateY(-10px);
+}
+.vms{
+  text-shadow: 0 0 5px white;
+}
+
+.icon {
+  font-size: 20px;
+}

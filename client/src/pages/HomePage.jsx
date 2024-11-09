@@ -1,9 +1,14 @@
 import React from 'react'
+import Header from '../components/Lander/Header'
+import Footer from '../components/Lander/Footer'
+import Content from '../components/Lander/Content'
 
 const HomePage = () => {
   return (
-    <div className='bg-slate-900 min-h-screen'>
-      
+    <div className='bg-slate-900 min-h-screen p-4'>
+      <Header />
+      <Content />
+      <Footer />
     </div>
   )
 }
