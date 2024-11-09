@@ -15,6 +15,9 @@ const userSchema = new mongoose.Schema({
     type: Date,
     required: false,  // Optional field for OTP expiration time
   },
+},
+{
+  collection:"users",
 });
 
 const User = mongoose.model('User', userSchema);

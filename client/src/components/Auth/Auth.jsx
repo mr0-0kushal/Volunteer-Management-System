@@ -1,6 +1,5 @@
 import React from 'react'
 import Login from './Login'
-import OTP from './OTP'
 import OtpVerificationForm from  './OtpVerificationForm'
 import { useState } from 'react'
 

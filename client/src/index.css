@@ -10,7 +10,6 @@
     gap: 5px;
       /* margin: 50px auto 0 auto; */
     padding: auto 15px 15px auto;
-    width: 250px;
     height: 40px;
     border-radius: 5px;
     border: 2px solid #152250;
@@ -22,6 +21,7 @@
     position: relative;
     overflow: hidden;
     z-index: 1;
+    outline: none;
   }
   
   .oauthButton::before {
@@ -31,12 +31,16 @@
     left: 0;
     height: 100%;
     width: 0;
-    background-color: #889de9;
+    background-color: #152250;
     z-index: -1;
     transition: all 250ms;
   }
   .oauthButton:hover::before {
     width: 100%;
+  }
+
+  .oauthButton:hover{
+    color: white;
   }
   
   .hide{
