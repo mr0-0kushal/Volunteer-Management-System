@@ -7,6 +7,8 @@ import TaskList from './components/TaskList/TaskList';
 import Home from './pages/HomePage'
 import Login from './components/Auth/Login';
 import EmployeeDash from './components/Dashboard/EmployeeDash'
+import OTP from './components/Auth/OtpVerificationForm';
+
 
 
 const App = () => {
@@ -16,7 +18,8 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/task" element={<TaskList />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/empdash" element={<EmployeeDash/>}/>
+        <Route path="/employee-dashboard" element={<EmployeeDash/>}/>
+        <Route path="/otp" element={<OTP />} />
       </Routes>
     </Router>
   );
