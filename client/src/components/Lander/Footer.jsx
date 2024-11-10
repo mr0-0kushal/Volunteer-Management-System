@@ -3,11 +3,12 @@ import React from 'react'
 const Footer = () => {
   return (
       <div className="flex flex-col mx-3 rounded-lg text-[#c2c5ff] foreground-component">
-        <div className="w-full draggable">
+        <hr className='border-[#c2c5ff]'/>
+        <div className="w-full draggable mt-4">
           <div className="container flex flex-col mx-auto">
-            <div className="flex flex-col items-center w-full my-20">
-            <h1 className='font-extrabold text-white text-4xl shadow-xl vms mb-8'>VMS</h1>
-              <div className="flex flex-col items-center gap-6 mb-8">
+            <div className="flex flex-col items-center w-full gap-5">
+            <h1 className='font-extrabold text-white text-4xl shadow-xl vms'>VMS</h1>
+              <div className="flex flex-col items-center gap-4">
                 <div className="flex flex-wrap items-center justify-center gap-5 lg:gap-12 gap-y-3 lg:flex-nowrap text-dark-grey-900">
                   <a
                     href="javascript:void(0)"
