@@ -5,7 +5,7 @@ import Content from '../components/Lander/Content'
 
 const HomePage = () => {
   return (
-    <div className='bg-slate-900 min-h-screen p-4'>
+    <div className='bg-slate-900 min-h-screen p-4 flex-col justify-between items-center'>
       <Header />
       <Content />
       <Footer />

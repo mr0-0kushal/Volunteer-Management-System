@@ -1,10 +1,14 @@
 {
     "scripts": {
-      "client": "npm run dev --prefix client",
-      "server": "npm run dev --prefix server",
-      "dev": "concurrently \"npm run client\" \"npm run server\""
+        "client": "npm run dev --prefix client",
+        "server": "npm run dev --prefix server",
+        "dev": "concurrently \"npm run client\" \"npm run server\""
     },
-  "devDependencies": {
-    "concurrently": "^9.1.0"
-  }
+    "devDependencies": {
+        "concurrently": "^9.1.0"
+    },
+    "dependencies": {
+        "@material-tailwind/react": "^2.1.10",
+        "styled-components": "^6.1.13"
+    }
 }
