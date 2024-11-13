@@ -1,4 +1,4 @@
-import User from '../models/User.js';  // Mongoose User model
+import userModel from '../models/User.js';  // Mongoose User model
 import transporter from '../nodemailer_config.js';  // Email transporter configuration
 
 // Generate a random OTP (4 digits)
@@ -40,7 +40,7 @@ export const login = async (req, res) => {
     const otpExpires = Date.now() + 5 * 60 * 1000;  // OTP expires in 5 minutes
 
     // Check if the user already exists
-    let user = await User.findOne({ email });
+    let user = await userModel.findOne({ email });
 
     if (!user) {
       // If the user does not exist, create a new user
@@ -81,7 +81,7 @@ export const verifyOtp = async (req, res) => {
     }
 
     // Find user by email
-    const user = await User.findOne({ email });
+    const user = await userModel.findOne({ email });
 
     if (!user) {
       console.log('User not found with email:', email); // Debug log

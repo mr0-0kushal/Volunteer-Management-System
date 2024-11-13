@@ -1,6 +1,6 @@
 // routes/auth.js
 import express from 'express';
-import { login, verifyOtp } from '../controllers/authController.js';
+import { login, verifyOtp } from '../controllers/user.controller.js';
 
 const router = express.Router();
 
