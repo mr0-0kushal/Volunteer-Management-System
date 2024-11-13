@@ -1,4 +1,4 @@
-import userModel from '../models/User.js';  // Mongoose User model
+import userModel from '../models/user.model.js';  // Mongoose User model
 import transporter from '../nodemailer_config.js';  // Email transporter configuration
 
 // Generate a random OTP (4 digits)

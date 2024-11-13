@@ -3,7 +3,8 @@ import dotenv from 'dotenv';
 import mongoose from 'mongoose';
 import cors from 'cors';
 import connectDB from './config/db.js';
-import userRouter from './routes/user.routes.js';  // Import your auth routes
+import userRouter from './routes/user.routes.js';
+import adminRouter from './routes/admin.routes.js';  // Import your auth routes
 
 // Load environment variables from .env file
 dotenv.config();
@@ -20,9 +21,9 @@ app.use(cors());
 // Connect to MongoDB
 connectDB();
 
-
-// Use your auth routes for handling login/OTP-related requests
-app.use('/api/user', userRouter);  // Prefix your auth routes with /api/auth
+// Alll routes here --> 
+app.use('/api/user' , userRouter);
+app.use('/api/admin' , adminRouter);
 
 // Default route for testing server
 app.get('/', (req, res) => {
