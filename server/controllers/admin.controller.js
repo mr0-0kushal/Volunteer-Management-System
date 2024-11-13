@@ -1,5 +1,5 @@
 import userTaskModel from '../models/userTask.model.js'
-import userInfoModel from '../models/userDetails.models.js'
+import userInfoModel from '../models/userInfo.models.js'
 
 
 const assignTask = async (req , res) => {
